@@ -1,3 +1,7 @@
+/*
+In postcss-default-selector.js, the :default selector is replaced by
+e.g., `:not([class~="custom"])`.
+*/
 h1:default {
     @extend .kern-heading-x-large;
 }
@@ -9,6 +13,7 @@ h2:default {
 h3:default {
     @extend .kern-heading-medium;
 }
+
 h4:default {
     @extend .kern-heading-small;
 }
@@ -20,52 +25,64 @@ p:default {
 ul:default {
     @extend .kern-list, .kern-list--bullet;
 }
+
 ol:default {
     @extend .kern-list, .kern-list--number;
 }
+
 a:default {
     @extend .kern-link;
     /* reset padding: kern-link seems to be only for block-level links. */
     padding: 0;
 }
 
-strong {
+strong:default {
     @extend .kern-body--bold;
 }
 
 details:default {
     @extend .kern-accordion;
 }
+
 details summary:default {
     @extend .kern-accordion__header;
 }
-details summary > * {
+
+details summary > *:default {
     @extend .kern-title;
     color: var(--kern-color-action-default);
 }
-details > *:not(summary) {
+
+details > *:not(summary):default {
     @extend .kern-accordion__body;
 }
+
 /* allow details to be used without wrapper */
-details + details {
+details + details:default {
     border-top: 0;
 }
-*:has(> input[type='text']) {
+
+*:has(> input[type='text']):default {
     @extend .kern-form-input;
 }
-form input {
+
+form input:default {
     @extend .kern-form-input__input;
 }
-form label {
+
+form label:default {
     margin-bottom: var(--kern-metric-space-small, 8px);
     display: block;
 }
-label {
+
+label:default {
     @extend .kern-label;
 }
-select {
+
+select:default {
     @extend .kern-form-input__select;
 }
-*:has(> select) {
+
+.select-wrapper {
     @extend .kern-form-input__select-wrapper;
 }
