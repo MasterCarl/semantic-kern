@@ -1,7 +1,7 @@
 module.exports = {
     plugins: [
         require("postcss-import"),
-        require("./postcss-plugins/process-default-selector"),
+        // open issue: this results in nested @layer rules
         require("postcss-extend-rule"),
         require("@fullhuman/postcss-purgecss").purgeCSSPlugin({
             content: ["./**/*.html"],

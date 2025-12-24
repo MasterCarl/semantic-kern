@@ -11,7 +11,7 @@ Note that this is a demo project, and might not be suitable for productive use.
 
 - Focuses on styling Markdown content: lists, headings, paragraphs.
 - Can be used as a standalone style, or together with the `KERN-native` package.
-- Escape hatch — adding `.custom` will disable these styles.
+- Uses `@layer`s to allow overriding defaults with KERN styles.
 
 ## How it works
 
