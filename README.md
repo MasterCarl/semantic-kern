@@ -5,6 +5,8 @@ be used as a lightweight starter kit that supplies sensible styles by default.
 
 Note that this is a demo project, and might not be suitable for productive use.
 
+[See the demo](https://mastercarl.github.io/semantic-kern/)
+
 ## Features
 
 - Focuses on styling Markdown content: lists, headings, paragraphs.
