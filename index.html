@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>semantic-KERN</title>
+
+    <link href="css/index.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    <style>
+        /* Demo styles */
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+        }
+        header {
+            padding: 2rem;
+            background: rgb(50, 0, 140);
+            --kern-color-layout-text-default: white;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding-inline: 2rem;
+        }
+
+        hgroup {
+            text-align: center;
+        }
+
+        .feature > h2 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .stack > * + * {
+            margin-top: 0.75rem;
+        }
+
+        .introduction {
+            margin-top: var(--kern-metric-space-large);
+            h2 {
+                margin-top: var(--kern-metric-space-large);
+            }
+        }
+
+        pre {
+            font-family: "Fira Code", monospace;
+            display: inline-block;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>semantic-KERN</h1>
+</header>
+
+<section class="introduction">
+    <p>
+        This is a learning and development project that explores how the KERN UX standard can
+    be used as a lightweight starter kit that supplies sensible styles by default.
+    </p>
+    <h2>Features</h2>
+    <ul>
+        <li>Focuses on styling Markdown content: lists, headings, paragraphs.</li>
+        <li>Can be used as a standalone style, or together with KERN-native.</li>
+        <li>Bring your own classes — applying kern- classes will disable these styles.</li>
+    </ul>
+    <h2>Not ready for production</h2>
+    <ul>
+        <li><pre>form</pre> and <pre>details</pre> elements haven't been tested extensively.</li>
+        <li>Lots of unused variables are still present in the generated styles.</li>
+    </ul>
+</section>
+
+<!-- Headings -->
+<section class="feature">
+    <h2>Headings</h2>
+    <div class="stack">
+        <h1 class="kern-heading-display">Heading 1 with display size</h1>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+    </div>
+</section>
+
+<!-- Text / Inline -->
+<section class="feature">
+    <h2>Text & Inline Elements</h2>
+    <div class="stack">
+        <p>
+            Paragraph with <strong>strong</strong>, <em>emphasis</em>,
+            <a href="#">a link</a>, <code>inline code</code>, and
+            <mark>mark</mark>
+            .
+        </p>
+    </div>
+</section>
+
+<!-- Lists -->
+<section class="feature">
+    <h2>Lists</h2>
+    <div class="stack">
+        <ul>
+            <li>Unordered item</li>
+            <li>Unordered item</li>
+            <li>Unordered item</li>
+        </ul>
+
+        <ol>
+            <li>Ordered item</li>
+            <li>Ordered item</li>
+            <li>Ordered item</li>
+        </ol>
+    </div>
+</section>
+
+<!-- Forms -->
+<section class="feature">
+    <h2>Form Controls</h2>
+    <div class="stack">
+        <form>
+        <label for="text">
+            Text input
+        </label>
+        <input id="text" placeholder="Placeholder text" type="text"/>
+        </form>
+        <form>
+        <label for="text-disabled">
+            Readonly text input
+        </label>
+        <input id="text-disabled" placeholder="Placeholder text" readonly type="text"/>
+        </form>
+        <form>
+        <label for="select">
+            Select
+        </label>
+            <div>
+        <select id="select">
+            <option>Option one</option>
+            <option>Option two</option>
+        </select></div>
+        </form>
+
+        <!--label>
+            Textarea
+            <textarea rows="3">Textarea content</textarea>
+        </label-->
+
+        <!-- div>
+            <label><input type="checkbox"/> Checkbox</label>
+            <label><input name="radio" type="radio"/> Radio</label>
+        </div-->
+
+        <!--div>
+            <button type="button">Button</button>
+            <button type="submit">Submit</button>
+            <input type="button" value="Input Button"/>
+        </div -->
+    </div>
+</section>
+
+<section class="feature">
+    <h2>Misc</h2>
+    <details>
+        <summary><span>Details / Summary</span></summary>
+        <div><p>Expandable content.</p></div>
+    </details>
+    <details>
+        <summary><span>Details / Summary</span></summary>
+        <div><p>Expandable content.</p></div>
+    </details>
+</section>
+</body>
+</html>
+

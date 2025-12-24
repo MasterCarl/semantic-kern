@@ -1,0 +1,71 @@
+h1:default {
+    @extend .kern-heading-x-large;
+}
+
+h2:default {
+    @extend .kern-heading-large;
+}
+
+h3:default {
+    @extend .kern-heading-medium;
+}
+h4:default {
+    @extend .kern-heading-small;
+}
+
+p:default {
+    @extend .kern-body;
+}
+
+ul:default {
+    @extend .kern-list, .kern-list--bullet;
+}
+ol:default {
+    @extend .kern-list, .kern-list--number;
+}
+a:default {
+    @extend .kern-link;
+    /* reset padding: kern-link seems to be only for block-level links. */
+    padding: 0;
+}
+
+strong {
+    @extend .kern-body--bold;
+}
+
+details:default {
+    @extend .kern-accordion;
+}
+details summary:default {
+    @extend .kern-accordion__header;
+}
+details summary > * {
+    @extend .kern-title;
+    color: var(--kern-color-action-default);
+}
+details > *:not(summary) {
+    @extend .kern-accordion__body;
+}
+/* allow details to be used without wrapper */
+details + details {
+    border-top: 0;
+}
+*:has(> input[type='text']) {
+    @extend .kern-form-input;
+}
+form input {
+    @extend .kern-form-input__input;
+}
+form label {
+    margin-bottom: var(--kern-metric-space-small, 8px);
+    display: block;
+}
+label {
+    @extend .kern-label;
+}
+select {
+    @extend .kern-form-input__select;
+}
+*:has(> select) {
+    @extend .kern-form-input__select-wrapper;
+}
